@@ -7,9 +7,9 @@ services:
     restart: unless-stopped
     working_dir: /var/www/html
     volumes:
-      - ./Franken:/var/www/html
-      - C:\Docker_Other/Franken/php/php.ini:/usr/local/etc/php/conf.d/custom.ini
-      - C:\Docker_Other/Franken/docker/caddy/Caddyfile:/etc/caddy/Caddyfile
+      - /c/Docker_Other/Franken/laravel_container:/var/www/html
+      - /c/Docker_Other/Franken/Docker/php/php.ini:/usr/local/etc/php/conf.d/custom.ini
+      - /c/Docker_Other/Franken/Docker/caddy/Caddyfile:/etc/caddy/Caddyfile
     ports:
       - "8585:80"
     environment:
